@@ -1,3 +1,5 @@
-struct LeetCodeRepo {
-    var text = "Hello, World!"
+
+
+struct CodeRepo: TwoSumProtocol {
+    
 }
