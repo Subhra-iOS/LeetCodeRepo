@@ -2,7 +2,7 @@ import XCTest
 @testable import LeetCodeRepo
 
 final class LeetCodeRepoTests: XCTestCase {
-    func testExample() {
+    /*func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
@@ -11,7 +11,7 @@ final class LeetCodeRepoTests: XCTestCase {
 
     static var allTests = [
         ("testExample", testExample),
-    ]
+    ]*/
     
     func testToSum(){
         XCTAssertEqual(CodeRepo().twoSum([2,7,11,15], 9),[0,1])
