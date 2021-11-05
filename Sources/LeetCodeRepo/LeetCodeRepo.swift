@@ -1,5 +1,5 @@
 
 
-struct CodeRepo: TwoSumProtocol {
+public struct CodeRepo: TwoSumProtocol {
     
 }

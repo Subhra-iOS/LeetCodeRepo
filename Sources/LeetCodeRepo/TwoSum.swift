@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TwoSumProtocol {
+public protocol TwoSumProtocol {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int]
 }
 
