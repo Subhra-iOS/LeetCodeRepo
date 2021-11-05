@@ -15,11 +15,15 @@ extension TwoSumProtocol{
     
     public func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var result: [Int] = [Int]()
-        for(index ,_) in nums.enumerated() {
+        for(index , number) in nums.enumerated() {
+            let remainder = target - number
             let nextIndex = index + 1
-            if nextIndex < nums.count, nums[index] + nums[nextIndex] == target{
-                result.append(index)
-                result.append(nextIndex)
+            for i in nextIndex ..< nums.count{
+                if remainder == nums[i]{
+                    result.append(index)
+                    result.append(i)
+                    break
+                }
             }
         }
         return result
