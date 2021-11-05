@@ -13,7 +13,7 @@ public protocol TwoSumProtocol {
 
 extension TwoSumProtocol{
     
-    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    public func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var result: [Int] = [Int]()
         for(index ,_) in nums.enumerated() {
             let nextIndex = index + 1
