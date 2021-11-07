@@ -9,6 +9,7 @@ import Foundation
 
 public protocol TwoSumProtocol {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int]
+    func containsDuplicate(_ nums: [Int]) -> Bool
 }
 
 extension TwoSumProtocol{
@@ -27,6 +28,20 @@ extension TwoSumProtocol{
             }
         }
         return result
+    }
+    
+    public func containsDuplicate(_ nums: [Int]) -> Bool{
+        var uniqueDict: [Int: Int] = [Int: Int]()
+        //var duplicateCounter: Int = 0
+        for (_ , item) in nums.enumerated(){
+            if uniqueDict[item] == item {
+               // duplicateCounter = duplicateCounter + 1
+                return true
+            }else{
+                uniqueDict[item] = item
+            }
+        }
+        return false
     }
     
 }
