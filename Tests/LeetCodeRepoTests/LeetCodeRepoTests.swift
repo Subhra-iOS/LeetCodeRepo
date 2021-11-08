@@ -16,4 +16,9 @@ final class LeetCodeRepoTests: XCTestCase {
     func testToSum(){
         XCTAssertEqual(CodeRepo().twoSum([2,7,11,15], 9),[0,1])
     }
+    
+    func testComputeArray(){
+       // XCTAssertEqual(ArrayRepo().productExceptSelf([1,2,3,4]), [24,12,8,6])
+        XCTAssertEqual(ArrayRepo().productExceptSelf([1,1]), [1,1])
+    }
 }

@@ -7,3 +7,7 @@ public struct CodeRepo: TwoSumProtocol {
 public struct StocksRepo: BuyAndSellStocksProtocol{
     public init(){}
 }
+
+public struct ArrayRepo: ComputeArrayProtocol{
+    public init(){}
+}
