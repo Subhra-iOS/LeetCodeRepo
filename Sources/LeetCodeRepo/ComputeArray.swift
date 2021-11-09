@@ -9,6 +9,7 @@ import Foundation
 
 public protocol ComputeArrayProtocol {
     func productExceptSelf(_ nums: [Int])-> [Int]
+    func maxSubArray(_ nums: [Int]) -> Int
 }
 
 extension ComputeArrayProtocol{
@@ -34,4 +35,31 @@ extension ComputeArrayProtocol{
         return items[index] * recurssiveMultiplerWith(index: (index + 1), items: items)
     }
     
+}
+
+extension ComputeArrayProtocol{
+    
+   /* public func maxSubArray(_ nums: [Int]) -> Int{
+        
+        var  max_so_far = 0
+        var  max_ending_here = 0
+        
+        for (_ , number) in nums.enumerated(){
+            max_ending_here = max_ending_here + number
+            if max_so_far < max_ending_here {
+                max_so_far = max_ending_here
+            }
+            if max_ending_here < 0 { max_ending_here = 0 }
+        }
+        return max_so_far
+    }*/
+    
+    public func maxSubArray(_ nums: [Int]) -> Int {
+        var curSum = nums[0], maxSum = nums[0]
+        for i in 1..<nums.count {
+            curSum = max(nums[i], curSum + nums[i])
+            maxSum = max(maxSum, curSum)
+        }
+        return maxSum
+    }
 }

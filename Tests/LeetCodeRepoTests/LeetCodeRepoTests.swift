@@ -18,7 +18,12 @@ final class LeetCodeRepoTests: XCTestCase {
     }
     
     func testComputeArray(){
-       // XCTAssertEqual(ArrayRepo().productExceptSelf([1,2,3,4]), [24,12,8,6])
+        XCTAssertEqual(ArrayRepo().productExceptSelf([1,2,3,4]), [24,12,8,6])
         XCTAssertEqual(ArrayRepo().productExceptSelf([1,1]), [1,1])
+    }
+    
+    func testMaxSubArray(){
+        XCTAssertEqual(ArrayRepo().maxSubArray([-2,1,-3,4,-1,2,1,-5,4]), 6)
+        XCTAssertEqual(ArrayRepo().maxSubArray([5,4,-1,7,8]), 23)
     }
 }
