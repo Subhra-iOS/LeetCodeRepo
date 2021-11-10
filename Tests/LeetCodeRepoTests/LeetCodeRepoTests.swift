@@ -1,5 +1,6 @@
 import XCTest
 @testable import LeetCodeRepo
+@testable import SubArrayRepo
 
 final class LeetCodeRepoTests: XCTestCase {
     /*func testExample() {
@@ -25,5 +26,10 @@ final class LeetCodeRepoTests: XCTestCase {
     func testMaxSubArray(){
         XCTAssertEqual(ArrayRepo().maxSubArray([-2,1,-3,4,-1,2,1,-5,4]), 6)
         XCTAssertEqual(ArrayRepo().maxSubArray([5,4,-1,7,8]), 23)
+    }
+    
+    func testMaxProductSubArray(){
+        XCTAssertEqual(SubArrayRepo().maxProduct([2,3,-2,4]), 6)
+        XCTAssertEqual(SubArrayRepo().maxProduct([-2,0,-1]), 0)
     }
 }

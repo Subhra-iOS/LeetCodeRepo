@@ -13,6 +13,8 @@ let package = Package(
         .library(
             name: "LeetCodeRepo",
             targets: ["LeetCodeRepo"]),
+        .library(name: "SubArrayRepo",
+                 targets: ["SubArrayRepo"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,8 +26,11 @@ let package = Package(
         .target(
             name: "LeetCodeRepo",
             dependencies: []),
+        .target(name: "SubArrayRepo",
+                dependencies: []),
         .testTarget(
             name: "LeetCodeRepoTests",
-            dependencies: ["LeetCodeRepo"]),
+            dependencies: ["LeetCodeRepo",
+                            "SubArrayRepo"]),
     ]
 )
