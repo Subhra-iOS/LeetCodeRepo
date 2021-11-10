@@ -12,9 +12,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "LeetCodeRepo",
-            targets: ["LeetCodeRepo"]),
-        .library(name: "SubArrayRepo",
-                 targets: ["SubArrayRepo"]),
+            targets: ["LeetCodeRepo",
+                      "SubArrayRepo"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
