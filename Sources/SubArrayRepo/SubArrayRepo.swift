@@ -7,6 +7,6 @@
 
 import Foundation
 
- struct SubArrayRepo: SubArrayProtocol {
+public struct SubArrayRepo: SubArrayProtocol {
     public init(){}
 }
