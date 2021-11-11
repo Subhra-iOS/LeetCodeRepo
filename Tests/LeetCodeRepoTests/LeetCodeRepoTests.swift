@@ -32,4 +32,9 @@ final class LeetCodeRepoTests: XCTestCase {
         XCTAssertEqual(SubArrayRepo().maxProduct([2,3,-2,4]), 6)
         XCTAssertEqual(SubArrayRepo().maxProduct([-2,0,-1]), 0)
     }
+    
+    func testMinElement(){
+        XCTAssertEqual(SubArrayRepo().findMin([4,5,6,7,0,1,2]), 0)
+        XCTAssertEqual(SubArrayRepo().findMin([3,4,5,1,2]), 1)
+    }
 }
