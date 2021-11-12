@@ -7,6 +7,8 @@
 
 import Foundation
 
-public struct SubArrayRepo: SubArrayProtocol {
+public protocol ArrayProtocol: SubArrayProtocol, SearchProtocol{}
+
+public struct SubArrayRepo: ArrayProtocol {
     public init(){}
 }
