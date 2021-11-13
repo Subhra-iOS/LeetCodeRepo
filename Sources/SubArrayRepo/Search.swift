@@ -9,7 +9,7 @@ import Foundation
 
 public protocol SearchProtocol {
     func search(_ nums: [Int], _ target: Int) -> Int
-    func isFound(_ nums: [Int], _ target: Int) -> Bool
+    func search(in nums: [Int], _ target: Int) -> Bool
 }
 
 extension SearchProtocol{
@@ -27,17 +27,19 @@ extension SearchProtocol{
         return searchIndex
     }
     
-    public func isFound(_ nums: [Int], _ target: Int) -> Bool{
-        
+    public func search(in nums: [Int], _ target: Int) -> Bool{
+        guard nums.count > 0 else {
+            return false
+        }
         let pivotIndex = (nums.count / 2)
         let pivotElement = nums[pivotIndex]
         let leftArray = nums.filter({$0 < pivotElement})
         let rightArray = nums.filter({$0 > pivotElement})
         if pivotElement == target { return true }
         else if target > pivotElement{
-            return isFound(rightArray, target)
+            return search(in: rightArray, target)
         }else if target < pivotElement{
-            return isFound(leftArray, target)
+            return search(in: leftArray, target)
         }else{
             return false
         }

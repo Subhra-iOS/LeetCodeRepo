@@ -42,4 +42,8 @@ final class LeetCodeRepoTests: XCTestCase {
         XCTAssertEqual(SubArrayRepo().search([4,5,6,7,0,1,2], 0), 4)
         XCTAssertEqual(SubArrayRepo().search([4,5,6,7,0,1,2], 3), -1)
     }
+    func testSearchStatus(){
+        XCTAssertEqual(SubArrayRepo().search(in: [4,5,6,7,0,1,2], 0), true)
+        XCTAssertEqual(SubArrayRepo().search(in: [4,5,6,7,0,1,2], 3), false)
+    }
 }
