@@ -32,3 +32,23 @@ extension BuyAndSellStocksProtocol{
         }
     }
 }
+
+public protocol MaxWaterContanierProtocol{
+    func maxWaterArea(_ height: [Int]) -> Int
+}
+
+extension MaxWaterContanierProtocol{
+    
+   public func maxWaterArea(_ height: [Int]) -> Int{
+        var area = 0
+        var left = 0
+        var right = height.count - 1
+        while left < right {
+            let currentArea = min(height[left], height[right])*(right - left)
+            area = max(area, currentArea)
+            if height[left] < height[right] { left = left + 1 }
+            else{ right = right - 1 }
+        }
+        return area
+    }
+}

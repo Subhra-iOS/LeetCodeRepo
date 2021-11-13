@@ -11,3 +11,7 @@ public struct StocksRepo: BuyAndSellStocksProtocol{
 public struct ArrayRepo: ComputeArrayProtocol{
     public init(){}
 }
+
+public struct WaterContanier: MaxWaterContanierProtocol{
+    public init(){}
+}

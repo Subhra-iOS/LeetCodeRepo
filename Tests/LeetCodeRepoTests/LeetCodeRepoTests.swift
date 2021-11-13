@@ -46,4 +46,14 @@ final class LeetCodeRepoTests: XCTestCase {
         XCTAssertEqual(SubArrayRepo().search(in: [4,5,6,7,0,1,2], 0), true)
         XCTAssertEqual(SubArrayRepo().search(in: [4,5,6,7,0,1,2], 3), false)
     }
+    
+    func testMaxWaterContanier(){
+        XCTAssertEqual(WaterContanier().maxWaterArea([1,8,6,2,5,4,8,3,7]), 49)
+        XCTAssertEqual(WaterContanier().maxWaterArea([4,3,2,1,4]), 16)
+    }
+    
+    func testMaxIncreasingArrayCount(){
+        XCTAssertEqual(ArrayRepo().lengthOfLIS([10,9,2,5,3,7,101,18]),4)
+        XCTAssertEqual(ArrayRepo().lengthOfLIS([0,1,0,3,2,3]),4)
+    }
 }
