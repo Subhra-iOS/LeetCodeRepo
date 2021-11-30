@@ -12,3 +12,11 @@ public protocol ArrayProtocol: SubArrayProtocol, SearchProtocol{}
 public struct SubArrayRepo: ArrayProtocol {
     public init(){}
 }
+
+public struct MissingRepo: MissingProtocol{
+    public init(){}
+}
+
+public struct ClimbStairRepo: ClimbingStairsProtocol{
+    public init(){}
+}

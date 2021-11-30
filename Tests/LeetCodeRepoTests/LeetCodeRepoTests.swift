@@ -56,4 +56,15 @@ final class LeetCodeRepoTests: XCTestCase {
         XCTAssertEqual(ArrayRepo().lengthOfLIS([10,9,2,5,3,7,101,18]),4)
         XCTAssertEqual(ArrayRepo().lengthOfLIS([0,1,0,3,2,3]),4)
     }
+    
+    func testMissingNumberFromCollection(){
+        XCTAssertEqual(MissingRepo().missingNumber([9,6,4,2,3,5,7,0,1]),8)
+        XCTAssertEqual(MissingRepo().missingNumber([3,0,1]),2)
+        XCTAssertEqual(MissingRepo().missingNumber([0]),1)
+    }
+    
+    func testClimbStairWayCount(){
+        XCTAssertEqual(ClimbStairRepo().climbStairs(3),3)
+        XCTAssertEqual(ClimbStairRepo().climbStairs(4),5)
+    }
 }

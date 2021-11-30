@@ -45,3 +45,29 @@ extension SearchProtocol{
         }
     }
 }
+
+public protocol MissingProtocol{
+    func missingNumber(_ nums: [Int]) -> Int
+}
+
+extension MissingProtocol{
+    public func missingNumber(_ nums: [Int]) -> Int{
+        
+        guard nums.count > 1 else {
+            return (nums[0] + 1)
+        }
+        
+        let sortedArr = nums.sorted {$0<$1}
+        
+        for (index, num) in sortedArr.enumerated() {
+            let nextIndex = index+1
+            if nextIndex < sortedArr.count{
+                let next = sortedArr[nextIndex]
+                if (next - num) > 1 { return (num + 1) }
+                else{continue}
+            }
+        }
+        
+        return 0
+    }
+}
