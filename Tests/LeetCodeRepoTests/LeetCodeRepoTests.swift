@@ -67,4 +67,8 @@ final class LeetCodeRepoTests: XCTestCase {
         XCTAssertEqual(ClimbStairRepo().climbStairs(3),3)
         XCTAssertEqual(ClimbStairRepo().climbStairs(4),5)
     }
+    
+    func testSortArray(){
+        XCTAssertEqual(SortArrayRepo().sort(array: [0,9,6,3,2,1,3]),[0, 1, 2, 3, 3, 6, 9])
+    }
 }

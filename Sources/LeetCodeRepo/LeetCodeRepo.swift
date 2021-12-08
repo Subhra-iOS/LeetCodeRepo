@@ -15,3 +15,7 @@ public struct ArrayRepo: ComputeArrayProtocol{
 public struct WaterContanier: MaxWaterContanierProtocol{
     public init(){}
 }
+
+public struct SortArrayRepo: SortArrayProtocol{
+    public init(){}
+}
