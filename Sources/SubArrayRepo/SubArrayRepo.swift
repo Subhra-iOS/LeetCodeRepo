@@ -20,3 +20,27 @@ public struct MissingRepo: MissingProtocol{
 public struct ClimbStairRepo: ClimbingStairsProtocol{
     public init(){}
 }
+
+public class Node<T>: LinkListProtocol{
+    public typealias DataType = T
+    
+    public var value: DataType
+    public var next: Node<DataType>?
+    
+    public init(value: T, next: Node<DataType>? = nil){
+        self.value = value
+        self.next = next
+    }
+    
+}
+
+extension Node{
+    public func search(value: DataType) -> Bool{
+        
+        return false
+    }
+    
+    public func searchMultipleOccuranceCount(for value: DataType) -> Int{
+        return 0
+    }
+}

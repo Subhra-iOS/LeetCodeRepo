@@ -26,3 +26,10 @@ extension ClimbingStairsProtocol{
         return stairSequence[n]
     }
 }
+
+//Write a function that counts the number of times a given int occurs in a Linked List
+public protocol LinkListProtocol{
+    associatedtype DataType
+    func search(value: DataType) -> Bool
+    func searchMultipleOccuranceCount(for value: DataType) -> Int
+}
