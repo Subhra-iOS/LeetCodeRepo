@@ -1,6 +1,7 @@
 import XCTest
 @testable import LeetCodeRepo
 @testable import SubArrayRepo
+@testable import DSAlgoRepo
 
 final class LeetCodeRepoTests: XCTestCase {
     /*func testExample() {
@@ -70,5 +71,9 @@ final class LeetCodeRepoTests: XCTestCase {
     
     func testSortArray(){
         XCTAssertEqual(SortArrayRepo().sort(array: [0,9,6,3,2,1,3]),[0, 1, 2, 3, 3, 6, 9])
+    }
+    
+    func testMergeIntervals(){
+        XCTAssertEqual(DSAlgoRepo().mergeIntervals(input: [[1,3], [12, 15], [2, 6], [8, 10]]), [[1, 6], [8, 10], [12, 15]])
     }
 }
