@@ -76,4 +76,13 @@ final class LeetCodeRepoTests: XCTestCase {
     func testMergeIntervals(){
         XCTAssertEqual(DSAlgoRepo().mergeIntervals(input: [[1,3], [12, 15], [2, 6], [8, 10]]), [[1, 6], [8, 10], [12, 15]])
     }
+    
+    func testSpiralTraverse(){
+        XCTAssertEqual(DSAlgoRepo().spiralTraverse([
+            [1,2,3],
+            [4,5,6],
+            [7,8,9],
+            [11,12,13]
+        ]), [1,2,3,6,9,13,12,11,7,4,5,8])
+    }
 }
