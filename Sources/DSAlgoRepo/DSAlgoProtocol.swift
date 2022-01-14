@@ -53,13 +53,16 @@ extension DSAlgoProtocol{
     /**
      Given an m X n matrix, return all elements of the matrix in spiral order.
      */
+    
+    //MARK:-- Time: O(n) where n is number of element in mateix (1 pass)
+    //MARK:-- Space: O(mn) where mn = col*row
     public func spiralTraverse(_ matrix: [[Int]]) -> [Int]{
         
         guard matrix.count > 0 else { return [] }
                 
         let totalElementCount = matrix[0].count * matrix.count
-        //var result: [Int?] = Array(repeating: nil, count: totalElementCount)
-        var result: [Int] = [Int]()
+        var result: [Int?] = Array(repeating: nil, count: totalElementCount) // 23 44455 344 Fixed size of array
+        //var result: [Int] = [Int]() // 234 4556 6677 _ _ _
         
         var left = 0
         var right = matrix[0].count - 1
@@ -90,6 +93,6 @@ extension DSAlgoProtocol{
             bottom -= 1
         }
         
-        return result
+        return result.compactMap({ $0 })
     }
 }
